@@ -81,9 +81,9 @@
 				 </div>
 				    <div class = "col-md-10">
                    <div class="input-group my">
-                       <input for="tags" type="search" class="form-control tags" >
+                       <input for="tags" type="search" class="form-control tags" id = "hel" >
                        <span class="input-group-btn">
-                       <button class="btn btn-primary " id = "main" type="button">
+                       <button class="btn btn-primary " id = "main" type="button" onclick="myFunction()" >
 					  
                        <span class="glyphicon glyphicon-search" aria-hidden="true">
                        </span> Search!</button>
@@ -122,8 +122,16 @@
          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
          <script type="text/javascript">
+	            function myFunction() {
+    var x = document.getElementById("hel").value;
+    if(x == "Equities"){
+	 window.location = 'EQ.html';
+	}
+};
              $(document).ready(function () {
-	           	var data = [
+	    	
+                 
+			  var data = [
 			
 			
 		
@@ -148,11 +156,12 @@
 					event.preventDefault();
 					// manually update the textbox and hidden field
 					$(this).val(ui.item.label);
+					
 					$("#autocomplete2-value").val(ui.item.value);
 				}
 			});	
 		
-		
+	
 		
 	
 		
